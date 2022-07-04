@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "owner": "launch_all",
+    "name": "바른생활길잡이",
+    "slug": "barunSangWhal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "privacy": "hidden",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "enabled":false
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.launchall.barunSangWhal"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.launchall.barunSangWhal"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
