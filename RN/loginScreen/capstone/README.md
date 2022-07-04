@@ -1,1 +1,1 @@
-# SokDak-SokDak-App
+# Capstone loginScreen, SignUpScreen
