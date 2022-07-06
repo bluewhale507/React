@@ -5,6 +5,7 @@ import Say from "./Say";
 import EventPractice from "./EventPractice";
 import ValidationSample from "./ValidationSample";
 import ScrollBox from "./ScrollBox";
+import { IterationSample } from "./IterationSample";
 
 class App extends Component {
   render() {
@@ -21,6 +22,8 @@ class App extends Component {
         <button onClick={() => this.scrollBox.scrollToBottom()}>
           맨 밑으로
         </button>
+        <button onClick={() => this.scrollBox.scrollToTop()}>맨 위로</button>
+        <IterationSample />
       </div>
     );
   }
