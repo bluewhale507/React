@@ -18,6 +18,7 @@ function getRandomColor() {
 class App extends Component {
   state = {
     color: "#000000",
+    visible: false,
   };
 
   handleClick = () => {
@@ -29,25 +30,40 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Info />
-        <MyComponent name="React" number={1}>
-          리액트
-        </MyComponent>
-        <Counter></Counter>
-        <Say></Say>
-        <EventPractice />
-        <ValidationSample></ValidationSample>
-        <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
-        <button onClick={() => this.scrollBox.scrollToBottom()}>
-          맨 밑으로
+        <button
+          onClick={() => {
+            this.setState({
+              visible: !this.state.visible,
+            });
+          }}
+        >
+          {this.state.visible ? "숨기기" : "보이기"}
         </button>
-        <button onClick={() => this.scrollBox.scrollToTop()}>맨 위로</button>
-        <IterationSample />
-        <ErrorBoundary>
-          <LifeCycleSample color={this.state.color} />
-          <button onClick={this.handleClick}>랜덤색상</button>
-        </ErrorBoundary>
-        <CounterUseState />
+        {this.state.visible && (
+          <div>
+            <Info />
+            <MyComponent name="React" number={1}>
+              리액트
+            </MyComponent>
+            <Counter></Counter>
+            <Say></Say>
+            <EventPractice />
+            <ValidationSample></ValidationSample>
+            <ScrollBox ref={(ref) => (this.scrollBox = ref)} />
+            <button onClick={() => this.scrollBox.scrollToBottom()}>
+              맨 밑으로
+            </button>
+            <button onClick={() => this.scrollBox.scrollToTop()}>
+              맨 위로
+            </button>
+            <IterationSample />
+            <ErrorBoundary>
+              <LifeCycleSample color={this.state.color} />
+              <button onClick={this.handleClick}>랜덤색상</button>
+            </ErrorBoundary>
+            <CounterUseState />
+          </div>
+        )}
       </div>
     );
   }
